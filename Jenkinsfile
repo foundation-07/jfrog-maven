@@ -1,11 +1,11 @@
 node {
-    def server = Artifactory.server('amrita.jfrog.io')
+    def server = Artifactory.server('anubhav.jfrog.io')
     def buildInfo = Artifactory.newBuildInfo()
     def rtMaven = Artifactory.newMavenBuild()
     
     
-    stage ('Checkout & Build') {
-        git url: 'https://github.com/itrainpulsars/jfrog-maven.git'
+    stage ('Code Checkout') {
+       git credentialsId: '1872dbc0-073d-46bb-b71c-75f8e3c2488b', url: 'https://github.com/foundation-07/jfrog-maven'
     }
  
     stage ('Code Build') {
