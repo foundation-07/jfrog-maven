@@ -5,7 +5,7 @@ node {
     
     
     stage ('Code Checkout') {
-       git credentialsId: '1872dbc0-073d-46bb-b71c-75f8e3c2488b', url: 'https://github.com/foundation-07/jfrog-maven'
+       git credentialsId: 'github-kritika', url: 'https://github.com/foundation-07/jfrog-maven.git'
     }
  
     stage ('Code Build') {
